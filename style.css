@@ -1,0 +1,134 @@
+body {
+	margin: 0;
+}
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+/*NAVBAR*/
+nav {
+    float: right;
+  }
+  
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+  
+    position: relative;
+}
+  
+nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+  
+nav a:hover {
+    color: #000;
+}
+  
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+}
+  
+nav a:hover::before {
+    width: 100%;
+}
+
+/* NEW ARRIVALS */
+.imgBox {
+    position: relative;
+    padding-right: 100px;
+    padding-top: 40px;
+}
+  
+.imgBox img {
+    max-width: 300px;
+    animation: anim-3 0.6s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+@keyframes anim-3 {
+    to {
+      opacity: 1;
+    }
+}
+.content {
+    position: relative;
+    padding: 100px 50px;
+    box-sizing: border-box;
+}
+  
+.content h2 {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    animation: anim-3 0.6s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+  
+.content p {
+    color: #000;
+    font-size: 1.1em;
+    animation: anim-4 0.9s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.9s;
+}
+  
+.content a {
+    position: relative;
+    display: inline-block;
+    background: #000;
+    padding: 15px 30px;
+    margin-top: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 200px;
+    font-size: 0.95em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: anim-4 1s ease-in forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+}
+@keyframes anim-4 {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+  
