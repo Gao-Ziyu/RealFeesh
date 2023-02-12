@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <title>Real Feesh Sign in Sign up</title>
+    <title>Real Feesh Sign in Sign up</title>
 
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css">
-        <!-- First JQuery, Bootstrap, etc, ... -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-    </head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <!-- First JQuery, Bootstrap, etc, ... -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
 
-    <body>
-        <!--NAVIGATION-->
+<body>
+    <!--NAVIGATION-->
+    <header>
+        <a href="index.html"><img src="sourceimages/logo.png" alt="" style="width: 100px"></a>
         <div class="navbar">
             <nav>
                 <ul>
@@ -23,35 +25,82 @@
                     <li><a href="products.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <!-- Cart/Avatar Container -->
             </nav>
         </div>
-        <!--Sign In-->
-        <div class="signin">
-            <h1>Sign in</h1>
-            <form>
-                <div class="signin-item">
-                    <label for="email"></label>
-                    <input type="email" name="email" required="required" placeholder="Email Address" id="signin-email">
-                </div>
-                <div class="signin-item">
-                    <label for="password"></label>
-                    <input type="password" name="password" required="required" placeholder="Password" id="signin-password">
-                </div>
-                <div class="button-sub">
-                    <input type="submit" class="button" title="Sign In" value="Sign In" id="signin-submit">
-                    <a href="index.html"></a>
-                    </input>
-                </div>
-            </form>
-            <div class="signin-footer">
-                <p><a href="signup.html">Create An Account</a></p>
-                <p><a href="">Forgot Password?</a></p>
-            </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
-    </body>
+        <div class="cart-avatar-container">
+            <button class="cart-btn" id="cart-btn">
+                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg"
+                    alt="cart-icon" class="cart-icon">
+                <span class="cart-quantity" id="cart-quantity"></span>
+            </button>
+            <div class="cart-container" id="cart-container">
+                <span class="cart-label">cart</span>
+                <div class="cart-contents" id="cart-contents">
+                    <div class="cart-contents-subcontainer">
+                        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg"
+                            alt="cart-thumbnail" class="cart-thumbnail">
+                        <div class="product-details">
+                            <span class="product-name">fall limited edition sneakers</span>
+                            <span>$125.00 x <span id="product-quantity"></span> <strong id="total"></strong></span>
+                        </div>
 
-    </html>
+                        <button class="delete-btn" id="delete-btn">
+                            <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-delete.svg"
+                                alt="delete-icon" class="delete-icon">
+                        </button>
+                    </div>
+                    <button class="checkout-btn">checkout</button>
+                </div>
+                <div class="empty-cart" id="empty-cart">
+                    <span>Your cart is empty.</span>
+                </div>
+            </div>
+            <div class="avatar"></div>
+
+        </div>
+    </header>
+    <!--Sign In-->
+    <div class="signin">
+        <h1>Sign in</h1>
+        <form>
+            <div class="signin-item">
+                <label for="email"></label>
+                <input type="email" name="email" required="required" placeholder="Email Address" id="signin-email">
+            </div>
+            <div class="signin-item">
+                <label for="password"></label>
+                <input type="password" name="password" required="required" placeholder="Password" id="signin-password">
+            </div>
+            <div class="button-sub">
+                <input type="submit" class="button" title="Sign In" value="Sign In" id="signin-submit">
+                <a href="index.html"></a>
+                </input>
+            </div>
+        </form>
+        <div class="signin-footer">
+            <p><a href="signup.html">Create An Account</a></p>
+            <p><a href="">Forgot Password?</a></p>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div class="footerT">
+            <section>
+                <h1 class="title">Newsletter</h1>
+                <form>
+                    <fieldset>
+                        <input type="email" name="email" placeholder="email address*" requried=""><button
+                            class="btn2">subscribe</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

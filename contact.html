@@ -1,128 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<title>Real Feesh</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Real Feesh</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!--NAVIGATION-->
-<header>
-  <div class="navbar">
+  <header>
+    <a href="index.html"><img src="sourceimages/logo.png" alt="" style="width: 100px"></a>
+    <div class="navbar">
       <nav>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <!-- Cart/Avatar Container -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Cart/Avatar Container -->
+      </nav>
+    </div>
     <div class="cart-avatar-container">
       <button class="cart-btn" id="cart-btn">
-        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg" alt="cart-icon" class="cart-icon">
+        <img
+          src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg"
+          alt="cart-icon" class="cart-icon">
         <span class="cart-quantity" id="cart-quantity"></span>
       </button>
-
       <div class="cart-container" id="cart-container">
         <span class="cart-label">cart</span>
-
         <div class="cart-contents" id="cart-contents">
           <div class="cart-contents-subcontainer">
-            <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg" alt="cart-thumbnail" class="cart-thumbnail">
+            <img
+              src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg"
+              alt="cart-thumbnail" class="cart-thumbnail">
             <div class="product-details">
               <span class="product-name">fall limited edition sneakers</span>
               <span>$125.00 x <span id="product-quantity"></span> <strong id="total"></strong></span>
             </div>
 
             <button class="delete-btn" id="delete-btn">
-              <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-delete.svg" alt="delete-icon" class="delete-icon">
+              <img
+                src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-delete.svg"
+                alt="delete-icon" class="delete-icon">
             </button>
           </div>
-
           <button class="checkout-btn">checkout</button>
         </div>
-
         <div class="empty-cart" id="empty-cart">
           <span>Your cart is empty.</span>
         </div>
       </div>
-
       <div class="avatar"></div>
+
     </div>
-  </div>
-      </nav>
-  </div>
-</header>
+  </header>
   <section class="contact">
-    <div class ="content">
+    <div class="content">
       <h2>Contact Us</h2>
       <p>Curious about our newest product launch? Having any burning questions or difficulty?
         We are here to help! Kindly fill up this form and we will get back to you soon!
       </p>
     </div>
-    <div class ="containter">
+    <div class="containter">
       <div class="contactinfo">
         <div class="box">
           <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
           <div class="text">
             <h3>Address</h3>
             <p>1234 Sea Kingdom,<br>FishLand,<br>123456</p>
-          </div>    
-      </div>
-      <div class ="box">
-        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-        <div class ="text">
-          <h3>Phone</h3>
-          <p>9123 4567</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+          <div class="text">
+            <h3>Phone</h3>
+            <p>9123 4567</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+          <div class="text">
+            <h3>Email</h3>
+            <p>RealFeesh@gmail.com</p>
+          </div>
         </div>
       </div>
-      <div class="box">
-        <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-        <div class="text">
-          <h3>Email</h3>
-          <p>RealFeesh@gmail.com</p>
-        </div>
+      <div class="contactForm">
+        <form method="post" action="mailto: s10221750@connect.np.edu.sg" enctype="text/plain" class=form>
+          <h2>Send Message</h2>
+          <div class="inputBox">
+            <input type="text" name="" required="required">
+            <span>Full Name</span>
+          </div>
+          <div class="inputBox">
+            <input type="text" name="" required="required">
+            <span>Email</span>
+          </div>
+          <div class="inputBox">
+            <textarea required="requried"></textarea>
+            <span>Type your message...</span>
+          </div>
+          <div class="inputBox">
+            <input type="submit" name="" value="Send">
+          </div>
+        </form>
       </div>
-  </div>
-  <div class="contactForm">
-    <form method="post" action="mailto: s10221750@connect.np.edu.sg" enctype="text/plain" class=form>
-      <h2>Send Message</h2>
-      <div class="inputBox">
-        <input type="text" name="" required="required">
-        <span>Full Name</span>
-      </div>
-      <div class="inputBox">
-        <input type="text" name="" required="required">
-        <span>Email</span>
-      </div>
-      <div class="inputBox">
-        <textarea required="requried"></textarea>
-        <span>Type your message...</span>
-      </div>
-      <div class="inputBox">
-        <input type="submit" name="" value="Send">
-      </div>
-    </form>
-  </div>
     </div>
   </section>
   <!--FOOTER-->
-<footer>
-  <div class="footerT">
+  <footer>
+    <div class="footerT">
       <section>
-          <h1 class="title">Newsletter</h1>
-          <form>
-              <fieldset>
-                  <input type="email" name="email" placeholder="email address*" requried=""><button class="btn2">subscribe</button>
-              </fieldset>
-          </form>
+        <h1 class="title">Newsletter</h1>
+        <form>
+          <fieldset>
+            <input type="email" name="email" placeholder="email address*" requried=""><button
+              class="btn2">subscribe</button>
+          </fieldset>
+        </form>
       </section>
-  </div>
-</footer>
+    </div>
+  </footer>
 </body>
+
 </html>
