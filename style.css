@@ -28,8 +28,7 @@ nav ul {
 nav li {
     display: inline-block;
     margin-left: 70px;
-    padding-top: 23px;
-  
+    padding-top: 10px;
     position: relative;
 }
   
@@ -551,7 +550,8 @@ img{
   display: flex;
   justify-content: space-between;
   width: 118px;
-  margin-left: auto;
+  margin-left: 60px;
+  padding: 12px 0px;
 }
 
 .cart-btn {
@@ -1430,6 +1430,7 @@ footer{
 }
 .footerT .title{
     line-height:0;
+    color: white;
 }
 .footerT fieldset{
     display:flex;
