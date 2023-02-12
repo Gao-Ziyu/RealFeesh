@@ -697,7 +697,7 @@ img{
 
 .avatar {
   position: relative;
-  background: url("https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-avatar.png");
+  background: url("sourceimages/fisherman.png");
   background-repeat: none;
   background-size: cover;
   background-position: center;
@@ -710,8 +710,7 @@ img{
 .avatar:hover::after {
   position: absolute;
   content: "";
-  border: 2px solid hsl(26, 100%, 55%);
-  border-radius: 50%;
+  border: 2px solid black;
   top: 0;
   left: 0;
   width: 46px;
