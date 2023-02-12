@@ -20,107 +20,156 @@
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="header-icons">
-                <a href="#"><i class='bx bx-shopping-bag'></i></a>
-                <div class="bx bx-menu" id="menu-icon"></div>
+            <!-- Cart/Avatar Container -->
+    <div class="cart-avatar-container">
+      <button class="cart-btn" id="cart-btn">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg" alt="cart-icon" class="cart-icon">
+        <span class="cart-quantity" id="cart-quantity"></span>
+      </button>
+
+      <div class="cart-container" id="cart-container">
+        <span class="cart-label">cart</span>
+
+        <div class="cart-contents" id="cart-contents">
+          <div class="cart-contents-subcontainer">
+            <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg" alt="cart-thumbnail" class="cart-thumbnail">
+            <div class="product-details">
+              <span class="product-name">fall limited edition sneakers</span>
+              <span>$125.00 x <span id="product-quantity"></span> <strong id="total"></strong></span>
+            </div>
+
+            <button class="delete-btn" id="delete-btn">
+              <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-delete.svg" alt="delete-icon" class="delete-icon">
+            </button>
+          </div>
+
+          <button class="checkout-btn">checkout</button>
+        </div>
+
+        <div class="empty-cart" id="empty-cart">
+          <span>Your cart is empty.</span>
+        </div>
+      </div>
+
+      <div class="avatar"></div>
+    </div>
+  </div>
         </nav>
     </div>
 </header>
 <!--PRODUCT DETAILS-->
-<div class = "card-wrapper">
-    <div class = "cardDtl">
-      <!-- card left -->
-      <div class = "product-imgs">
-        <div class = "img-display">
-          <div class = "img-showcase">
-            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" alt = "shoe image">
-            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" alt = "shoe image">
-            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" alt = "shoe image">
-            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg" alt = "shoe image">
-          </div>
+
+  <!-- Main -->
+  <div class="main-container">
+
+    <!-- Product Images -->
+    <section class="left">
+      <div class="product-container" id="product-container">
+        <div class="product-image">
+          <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1.jpg" alt="product-img-1" class="product-img">
         </div>
-        <div class = "img-select">
-          <div class = "img-item">
-            <a href = "#" data-id = "1">
-              <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" alt = "shoe image">
-            </a>
-          </div>
-          <div class = "img-item">
-            <a href = "#" data-id = "2">
-              <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" alt = "shoe image">
-            </a>
-          </div>
-          <div class = "img-item">
-            <a href = "#" data-id = "3">
-              <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" alt = "shoe image">
-            </a>
-          </div>
-          <div class = "img-item">
-            <a href = "#" data-id = "4">
-              <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg" alt = "shoe image">
-            </a>
-          </div>
+        <div class="product-image">
+          <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-2.jpg" alt="product-img-2" class="product-img">
+        </div>
+        <div class="product-image">
+          <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-3.jpg" alt="product-img-3" class="product-img">
+        </div>
+        <div class="product-image">
+          <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-4.jpg" alt="product-img-4" class="product-img">
         </div>
       </div>
-      <!-- card right -->
-      <div class = "product-content">
-        <h2 class = "product-title">nike shoes</h2>
-        <a href = "#" class = "product-link">visit nike store</a>
-        <div class = "product-rating">
-          <i class = "fas fa-star"></i>
-          <i class = "fas fa-star"></i>
-          <i class = "fas fa-star"></i>
-          <i class = "fas fa-star"></i>
-          <i class = "fas fa-star-half-alt"></i>
-          <span>4.7(21)</span>
+
+      <!-- Thumbnails --------------------------------------------------->
+      <div class="thumbnail-container">
+        <div class="thumbnail-image" onClick="currentSlide(1)">
+          <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg" alt="product-thumbnail-1" class="product-thumbnail">
         </div>
-  
-        <div class = "product-price">
-          <p class = "last-price">Old Price: <span>$257.00</span></p>
-          <p class = "new-price">New Price: <span>$249.00 (5%)</span></p>
+        <div class="thumbnail-image" onClick="currentSlide(2)">
+          <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-2-thumbnail.jpg" alt="product-thumbnail-2" class="product-thumbnail">
         </div>
-  
-        <div class = "product-detail">
-          <h2>about this item: </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
-          <ul>
-            <li>Color: <span>Black</span></li>
-            <li>Available: <span>in stock</span></li>
-            <li>Category: <span>Shoes</span></li>
-            <li>Shipping Area: <span>All over the world</span></li>
-            <li>Shipping Fee: <span>Free</span></li>
-          </ul>
+        <div class="thumbnail-image" onClick="currentSlide(3)">
+          <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-3-thumbnail.jpg" alt="product-thumbnail-3" class="product-thumbnail">
         </div>
-  
-        <div class = "purchase-info">
-          <input type = "number" min = "0" value = "1">
-          <button type = "button" class = "btn">
-            Add to Cart <i class = "fas fa-shopping-cart"></i>
-          </button>
-          <button type = "button" class = "btn">Compare</button>
+        <div class="thumbnail-image" onClick="currentSlide(4)">
+          <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-4-thumbnail.jpg" alt="product-thumbnail-4" class="product-thumbnail">
         </div>
-  
-        <div class = "social-links">
-          <p>Share At: </p>
-          <a href = "#">
-            <i class = "fab fa-facebook-f"></i>
-          </a>
-          <a href = "#">
-            <i class = "fab fa-twitter"></i>
-          </a>
-          <a href = "#">
-            <i class = "fab fa-instagram"></i>
-          </a>
-          <a href = "#">
-            <i class = "fab fa-whatsapp"></i>
-          </a>
-          <a href = "#">
-            <i class = "fab fa-pinterest"></i>
-          </a>
+      </div>
+    </section>
+
+    <!-- Product Description -->
+    <section class="right">
+      <small>sneaker company</small>
+      <h1>fall limited edition sneakers</h1>
+
+      <p>
+        <span>These low-profile sneakers are your perfect casual wear </span>
+        <span>companion. Featuring a durable rubber outer sole, they'll </span>
+        withstand everything the weather can offer.
+      </p>
+
+      <div class="price">
+        <div class="discounted-price">
+          <strong class="current-price">$125.00</strong>
+          <strong class="discount">50%</strong>
         </div>
+
+        <s>$250.00</s>
+      </div>
+
+      <!-- Cart Controls -->
+      <div class="add-to-cart">
+        <div class="quantity">
+          <button class="decrease-btn quantity-btn" id="decrease-btn"><img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-minus.svg" alt="decrease-icon" class="decrease-icon"></button>
+          <span id="add-quantity">0</span>
+          <button class="increase-btn quantity-btn" id="increase-btn"><img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-plus.svg" alt="increase-icon" class="increase-icon"></button>
+        </div>
+
+        <button class="add-to-cart-btn" id="add-to-cart-btn"><img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg" alt="cart-btn-icon" class="cart-btn-icon">Add to cart</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="close-icon-container" id="close-icon-container">
+      <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-close.svg" alt="close-icon" class="close-icon">
+    </div>
+
+    <!-- Product Images -->
+    <div class="product-container">
+      <div class="product-image-lb">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1.jpg" alt="product-img-1" class="product-img-lb">
+      </div>
+      <div class="product-image-lb">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-2.jpg" alt="product-img-2" class="product-img-lb">
+      </div>
+      <div class="product-image-lb">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-3.jpg" alt="product-img-3" class="product-img-lb">
+      </div>
+      <div class="product-image-lb">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-4.jpg" alt="product-img-4" class="product-img-lb">
+      </div>
+
+      <button class="product-btn prev-btn" onclick="plusSlides(-1)"><img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-previous.svg" alt="prev-button-icon" class="button-icon"></button>
+      <button class="product-btn next-btn" onclick="plusSlides(1)"><img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-next.svg" alt="next-button-icon" class="button-icon"></button>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="thumbnail-container-lb">
+      <div class="thumbnail-image-lb" onClick="currentSlide(1)">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg" alt="product-thumbnail-1" class="product-thumbnail">
+      </div>
+      <div class="thumbnail-image-lb" onClick="currentSlide(2)">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-2-thumbnail.jpg" alt="product-thumbnail-2" class="product-thumbnail">
+      </div>
+      <div class="thumbnail-image-lb" onClick="currentSlide(3)">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-3-thumbnail.jpg" alt="product-thumbnail-3" class="product-thumbnail">
+      </div>
+      <div class="thumbnail-image-lb" onClick="currentSlide(4)">
+        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-4-thumbnail.jpg" alt="product-thumbnail-4" class="product-thumbnail">
       </div>
     </div>
   </div>
+  <script src="product.js"></script>
 </body>
 </html>
