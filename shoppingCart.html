@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Checkout</title>
+    <style>
+        a {
+            border: 0 none;
+            outline: 0;
+            text-decoration: none;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        p {
+            margin: 0.75rem 0 0;
+        }
+        
+        h1 {
+            font-size: 25px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+        }
+        
+        input {
+            border: 0 none;
+            outline: 0 none;
+        }
+        
+        button {
+            border: 0 none;
+            outline: 0 none;
+            background-color: #666;
+            color: #fff;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+        
+        button:focus {
+            background-color: #555;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .checkout-module {
+            width: 100%;
+        }
+        
+        .checkout-labels {
+            width: 100%;
+        }
+        
+        .checkout-product {
+            width: 100%;
+        }
+        
+        input {
+            float: left;
+        }
+        
+        button {
+            float: left;
+        }
+        
+        .checkout {
+            float: left;
+        }
+        
+        .checkout-module {
+            float: left;
+        }
+        
+        .checkout-labels {
+            float: left;
+        }
+        
+        .item {
+            float: left;
+        }
+        
+        .price {
+            float: left;
+        }
+        
+        .quantity {
+            float: left;
+        }
+        
+        .subtotal {
+            float: left;
+        }
+        
+        .checkout-product {
+            float: left;
+        }
+        
+        .product-image {
+            float: left;
+        }
+        
+        .product-details {
+            float: left;
+        }
+        
+        .checkout {
+            padding: 0 1rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 70%;
+        }
+        
+        aside {
+            padding: 0 1rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .checkout-module {
+            color: #111;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.3125rem;
+        }
+        
+        .promo-code-field {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            text-transform: uppercase;
+            transition: all 0.2s linear;
+            width: 48%;
+        }
+        
+        .promo-code-field:hover {
+            border: 1px solid #999;
+        }
+        
+        .promo-code-field:focus {
+            border: 1px solid #999;
+        }
+        
+        .promo-code-cta {
+            border-radius: 4px;
+            font-size: 0.625rem;
+            margin-left: 0.625rem;
+            padding: 0.6875rem 1.25rem 0.625rem;
+        }
+        
+        .checkout-labels {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            margin-top: 1.625rem;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            color: #111;
+            display: inline-block;
+            padding: 0.625rem 0;
+        }
+        
+        .item {
+            width: 55%;
+        }
+        
+        .price {
+            width: 15%;
+        }
+        
+        .quantity {
+            width: 15%;
+        }
+        
+        .subtotal {
+            width: 15%;
+        }
+        
+        .subtotal {
+            text-align: right;
+        }
+        
+        .remove {
+            bottom: 1.125rem;
+            float: right;
+            position: absolute;
+            right: 0;
+            text-align: right;
+            width: 45%;
+        }
+        
+        .remove button {
+            background-color: transparent;
+            color: #777;
+            float: none;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        
+        .item-heading {
+            padding-left: 4.375rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .checkout-product {
+            border-bottom: 1px solid #ccc;
+            padding: 1rem 0;
+            position: relative;
+        }
+        
+        .product-image {
+            width: 35%;
+        }
+        
+        .product-details {
+            width: 65%;
+        }
+        
+        .product-details p {
+            font-size: 20px;
+        }
+        
+        .product-frame {
+            border: 1px solid #aaa;
+        }
+        
+        .product-details {
+            padding: 0 1.5rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .quantity-field {
+            background-color: #ccc;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            font-size: 0.625rem;
+            padding: 2px;
+            width: 3.75rem;
+        }
+        
+        aside {
+            float: right;
+            position: relative;
+            width: 30%;
+        }
+        
+        .summary {
+            margin-top: 5%;
+            background-color: #eee;
+            border: 1px solid #aaa;
+            padding: 1rem;
+            position: fixed;
+            width: 300px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .summary-total-items {
+            color: #666;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+        
+        .summary-subtotal {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            clear: both;
+            margin: 1rem 0;
+            overflow: hidden;
+            padding: 0.5rem 0;
+        }
+        
+        .summary-total {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            clear: both;
+            margin: 1rem 0;
+            overflow: hidden;
+            padding: 0.5rem 0;
+        }
+        
+        .summary-promo {
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        
+        .promo-title {
+            float: left;
+            width: 70%;
+        }
+        
+        .promo-value {
+            color: #8b0000;
+            float: left;
+            text-align: right;
+            width: 30%;
+        }
+        
+        .summary-delivery {
+            padding-bottom: 3rem;
+        }
+        
+        .subtotal-value,
+        .total-value {
+            text-align: right;
+        }
+        
+        .total-title {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .summary-checkout {
+            display: block;
+        }
+        
+        .checkout-cta {
+            display: block;
+            float: none;
+            font-size: 0.75rem;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 0.625rem 0;
+            width: 100%;
+        }
+        
+        .summary-delivery-selection {
+            background-color: #ccc;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            display: block;
+            font-size: 0.625rem;
+            height: 34px;
+            width: 100%;
+        }
+        
+        @media screen and (max-width: 640px) {
+            aside,
+            .checkout,
+            .summary,
+            .item,
+            .remove {
+                width: 100%;
+            }
+            .checkout-labels {
+                display: none;
+            }
+            .checkout-module {
+                margin-bottom: 1rem;
+            }
+            .item {
+                margin-bottom: 1rem;
+            }
+            .product-image {
+                width: 40%;
+            }
+            .product-details {
+                width: 60%;
+            }
+            .price,
+            .subtotal {
+                width: 33%;
+            }
+            .quantity {
+                text-align: center;
+                width: 34%;
+            }
+            .quantity-field {
+                float: none;
+            }
+            .remove {
+                bottom: 0;
+                text-align: left;
+                margin-top: 0.75rem;
+                position: relative;
+            }
+            .remove button {
+                padding: 0;
+            }
+            .summary {
+                margin-top: 1.25rem;
+                position: relative;
+            }
+        }
+        
+        @media screen and (min-width: 641px) and (max-width: 960px) {
+            aside {
+                padding: 0 1rem 0 0;
+            }
+            .summary {
+                width: 28%;
+            }
+        }
+        
+        @media screen and (max-width: 960px) {
+            main {
+                width: 100%;
+            }
+            .product-details {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="sourceimages/logo.png" alt="" style="width: 100px"></a>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Cart/Avatar Container -->
+            </nav>
+        </div>
+        <div class="cart-avatar-container">
+            <button class="cart-btn" id="cart-btn">
+        <img
+          src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg"
+          alt="cart-icon" class="cart-icon">
+        <span class="cart-quantity" id="cart-quantity"></span>
+      </button>
+            <div class="cart-container" id="cart-container">
+                <span class="cart-label">cart</span>
+                <div class="cart-contents" id="cart-contents">
+                    <div class="cart-contents-subcontainer">
+                        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg" alt="cart-thumbnail" class="cart-thumbnail">
+                        <div class="product-details">
+                            <span class="product-name">fall limited edition sneakers</span>
+                            <span>$125.00 x <span id="product-quantity"></span> <strong id="total"></strong></span>
+                        </div>
+
+                        <button class="delete-btn" id="delete-btn">
+              <img
+                src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-delete.svg"
+                alt="delete-icon" class="delete-icon">
+            </button>
+                    </div>
+                    <button class="checkout-btn">checkout</button>
+                </div>
+                <div class="empty-cart" id="empty-cart">
+                    <span>Your cart is empty.</span>
+                </div>
+            </div>
+            <a href="profile.html">
+                <div class="avatar"></div>
+            </a>
+
+        </div>
+    </header>
+    <main>
+        <div class="checkout">
+            <div class="checkout-module">
+                <label for="promo-code">Enter a promotional code</label>
+                <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
+                <button class="promo-code-cta">Apply</button>
+            </div>
+            <div class="checkout-labels">
+                <ul>
+                    <li class="item item-heading">Item</li>
+                    <li class="price">Price</li>
+                    <li class="quantity">Quantity</li>
+                    <li class="subtotal">Subtotal</li>
+                </ul>
+            </div>
+            <div class="checkout-product">
+                <div class="item">
+                    <div class="product-image">
+                        <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame">
+                    </div>
+                    <div class="product-details">
+                        <h1><strong><span class="item-quantity">4</span> x Eliza J</strong> Lace Sleeve Cuff Dress</h1>
+                        <p><strong>Navy, Size 18</strong></p>
+                        <p>Product Code - 232321939</p>
+                    </div>
+                </div>
+                <div class="price">$26.00</div>
+                <div class="quantity">
+                    <input type="number" value="4" min="1" class="quantity-field">
+                </div>
+                <div class="subtotal">$104.00</div>
+                <div class="remove">
+                    <button>Remove</button>
+                </div>
+            </div>
+            <div class="checkout-product">
+                <div class="item">
+                    <div class="product-image">
+                        <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame">
+                    </div>
+                    <div class="product-details">
+                        <h1><strong><span class="item-quantity">4</span> x Eliza J</strong> Lace Sleeve Cuff Dress</h1>
+                        <p><strong>Navy, Size 18</strong></p>
+                        <p>Product Code - 232321939</p>
+                    </div>
+                </div>
+                <div class="price">$26.00</div>
+                <div class="quantity">
+                    <input type="number" value="4" min="1" class="quantity-field">
+                </div>
+                <div class="subtotal">$104.00</div>
+                <div class="remove">
+                    <button>Remove</button>
+                </div>
+            </div>
+        </div>
+        <aside>
+            <div class="summary">
+                <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+                <div class="summary-subtotal">
+                    <div class="subtotal-title">Subtotal</div>
+                    <div class="subtotal-value final-value" id="checkout-subtotal">$130.00</div>
+                    <div class="summary-promo hide">
+                        <div class="promo-title">Promotion</div>
+                        <div class="promo-value final-value" id="checkout-promo"></div>
+                    </div>
+                </div>
+                <div class="summary-delivery">
+                    <select name="delivery-collection" class="summary-delivery-selection">
+                <option value="0" selected="selected">Select Collection or Delivery</option>
+                <option value="collection">Collection</option>
+                <option value="first-class">Royal Mail 1st Class</option>
+                <option value="second-class">Royal Mail 2nd Class</option>
+                <option value="signed-for">Royal Mail Special Delivery</option>
+              </select>
+                </div>
+                <div class="summary-total">
+                    <div class="total-title">Total</div>
+                    <div class="total-value final-value" id="checkout-total">$130.00</div>
+                </div>
+                <div class="summary-checkout">
+                    <button class="checkout-cta">Go to Secure Checkout</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+</body>
+
+</html>
