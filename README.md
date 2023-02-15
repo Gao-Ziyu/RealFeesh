@@ -51,6 +51,7 @@ Gao Ziyu:
 - Checkout page
 - Navigation bar
 - Footer
+- Readme
 
 Leong Yen Zhen
 - About us page
@@ -58,6 +59,7 @@ Leong Yen Zhen
 - profile page
 - did and uploaded the images for our product and product details
 - update website with products details(category,prices,name)
+- Readme
 
 ### Media
 Animation for loading taken from: https://lottiefiles.com/99844-loading
