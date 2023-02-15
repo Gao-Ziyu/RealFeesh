@@ -23,13 +23,24 @@ This is an ecommerce webpage for RealFeesh which sells mainly sneakers for unise
 - JQuery
 
 ## Testing
-
+1. Sign in Sign up page:
+  - Sign up with name, email and password,
+  - go to sign in and enter the email and password
+  - when wrong credentials, if will have alert box popping up and you will not be able to log in
+  - otherwise will be able to sign in successfully.
 
 ## Credits
 
 ### Credit for each parts
 
 Gao Ziyu:
+- Index page
+- Sign in Sign up page with API implemented
+- Products page, product details page
+- Delivery page
+- Checkout page
+- Navigation bar
+- Footer
 
 Leong Yen Zhen
 - About us page
