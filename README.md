@@ -2,7 +2,16 @@
 Year 1 Integrated Project.
 This is an ecommerce webpage for RealFeesh which sells mainly sneakers for unisex. We are to bring your coolest self with our sneakers. 
 
+External User's Goal: The site's users are potential customers, looking for products that they like and purchase them.
+
+Site Owner's Goal: Present our branding and product in the best light and appeal to customers to win customer's confidence and make a purchase.
+
+This project is an ecommerce webpage for our brand, RealFeesh which sells mainly footwear for unisex. We have product such as Sneakers and Boots. We believe that having a good footwear will help boost one's confidence and walk to succeed in life. Thus,this project serves as a platform that allows users to find out more about our brand and check out our unique and coolest footwear. The unique selling point of our product is that we have fish themed shoes that has fish tail and fin which adds a little spark to your everyday fit.
+
 ## Design Process
+
+The main audience of this website is conusmers or anyone whose interest to buy a footwear and would like to buy a shoe.This project is the best way to help them achieve these it is a one-stop website that allows them to find out more about our different type of footwear products and make a purchase.
+
 - As a user/ consumer, I would like to have a profile where I will be able to check all my deliveries and saved shopping cart when visiting the website and purchasing.
 - As back-end developer, I would like to have user data stored in database for profile so easy log in access to keep track.
 - As a consumer, I would like to have easy navigation across the pages.
@@ -21,6 +30,7 @@ This is an ecommerce webpage for RealFeesh which sells mainly sneakers for unise
 - CSS
 - Bootstrap
 - JQuery
+- Adobe illustrator is used for the product illustrations and background.
 
 ## Testing
 1. Sign in Sign up page:
