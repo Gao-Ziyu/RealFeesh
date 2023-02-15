@@ -464,7 +464,6 @@ img {
 }
 
 .product-price:first-of-type {
-    text-decoration: line-through;
     color: var(--carribean-green);
 }
 
@@ -1165,6 +1164,13 @@ form {
     border-bottom: 1px dotted #8c8c8c;
 }
 
+.loading {
+    display: none;
+    background: #fafafa;
+    max-width: 370px;
+    margin: 0;
+}
+
 
 /*CONTACT PAGE*/
 
@@ -1183,7 +1189,7 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(sourceimages/RFBG.png);
+    background: url(Images/bg.jpeg);
     background-size: cover;
 }
 

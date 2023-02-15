@@ -2,14 +2,289 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Checkout</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: 0 -16px;
+    }
+
+    .col-25 {
+      -ms-flex: 25%;
+      flex: 25%;
+    }
+
+    .col-50 {
+      -ms-flex: 50%;
+      flex: 50%;
+    }
+
+    .col-75 {
+      -ms-flex: 75%;
+      flex: 75%;
+    }
+
+    .col-25,
+    .col-50,
+    .col-75 {
+      padding: 0 16px;
+    }
+
+    .container {
+      background-color: #f2f2f2;
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+      padding: 5%;
+      margin: 5%;
+    }
+
+    input[type=text] {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    label {
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .icon-container {
+      margin-bottom: 20px;
+      padding: 7px 0;
+      font-size: 24px;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      width: 100%;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 17px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: #00bcd4;
+      color: #fff;
+    }
+
+    a {
+      color: #2196F3;
+    }
+
+    hr {
+      border: 1px solid lightgrey;
+    }
+
+    span.price {
+      float: right;
+      color: grey;
+    }
+
+    #price-display {
+      color: #333;
+      font-size: 1.8em;
+      font-weight: 800;
+      text-transform: uppercase;
+      animation: anim-3 0.6s ease-in forwards;
+      opacity: 0;
+      margin-bottom: 20px;
+    }
+
+    .checkout-loading {
+      display: none;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 800px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+
+      .col-25 {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <a href="index.html"><img src="sourceimages/logo.png" alt="" style="width: 100px"></a>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Cart/Avatar Container -->
+      </nav>
+    </div>
+    <div class="cart-avatar-container">
+      <button class="cart-btn" id="cart-btn">
+        <img
+          src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg"
+          alt="cart-icon" class="cart-icon">
+        <span class="cart-quantity" id="cart-quantity"></span>
+      </button>
+      <div class="cart-container" id="cart-container">
+        <span class="cart-label">cart</span>
+        <div class="cart-contents" id="cart-contents">
+          <div class="cart-contents-subcontainer">
+            <img
+              src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg"
+              alt="cart-thumbnail" class="cart-thumbnail">
+            <div class="product-details">
+              <span class="product-name">fall limited edition sneakers</span>
+              <span>$125.00 x <span id="product-quantity"></span> <strong id="total"></strong></span>
+            </div>
 
+            <button class="delete-btn" id="delete-btn">
+              <img
+                src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-delete.svg"
+                alt="delete-icon" class="delete-icon">
+            </button>
+          </div>
+          <button class="checkout-btn">checkout</button>
+        </div>
+        <div class="empty-cart" id="empty-cart">
+          <span>Your cart is empty.</span>
+        </div>
+      </div>
+      <a href="profile.html">
+        <div class="avatar"></div>
+      </a>
+
+    </div>
+  </header>
+  <div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form id="checkout-form">
+          <div class="row">
+            <div class="col-50">
+              <h3>Payment:</h3>
+              <p id="price-display">-</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="john@example.com">
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" name="city" placeholder="New York">
+
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" placeholder="NY">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip" placeholder="10001">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-50">
+              <h3>Payment Method</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" value="Make Payment" class="btn" id="pay">
+        </form>
+        <div class="checkout-loading">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_l9bcfk19.json" background="transparent"
+            speed="1" style="width: 150px; height: 150px;margin: 0 auto;" loop autoplay></lottie-player>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+      const pay = document.getElementById('pay');
+      const price = document.getElementById('price-display');
+
+      // payment on onlclick
+      pay.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        document.getElementById('checkout-form').style.display = 'none';
+        const loading = document.querySelector('.checkout-loading');
+        loading.style.display = 'block';
+
+        setTimeout(() => {
+          loading.style.display = 'none';
+          // append payment success message to container
+          const container = document.querySelector('.container');
+          const success = document.createElement('div');
+          success.classList.add('success');
+          success.innerHTML = `
+          <h3>Payment Successful!</h3>
+          <p style="margin-bottom: 20px;">Thank you for shopping with us. Your order will be delivered in 3-5 business days.</p>
+          <a href="index.html"><input type="submit" value="Continue Shopping" class="btn" id="pay"></a>
+          `;
+          container.appendChild(success);
+          
+        }, 3000);
+      });
+    </script>
 </body>
 
 </html>

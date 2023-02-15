@@ -35,12 +35,16 @@ $(document).ready(function () {
         $.ajax(settings).done(function (response) {
             console.log(response);
             $("#signup-submit").prop("disabled", false);
+            alert("Sign Up Successful!");
+            window.location.href = "signin.html";
         });
 
     });
 
     $("#signin-submit").on("click", function (e) {
         e.preventDefault();
+        $(".signin-form").hide();
+        $(".loading").show();
 
         let signinEmail = $("#signin-email").val();
         let signinPassword = $("#signin-password").val();
@@ -69,7 +73,6 @@ $(document).ready(function () {
 
         $.ajax(settings).done(function (response) {
             $("#signin-submit").prop("disabled", false);
-
             var success = false;
             for (i = 0; i < response.length; i++) {
                 if (response[i].email == signinEmail && response[i].password == signinPassword) {
@@ -82,6 +85,8 @@ $(document).ready(function () {
                 }
             }
             if (success == false) {
+                $(".signin-form").show();
+                $(".loading").hide();
                 alert("Invalid Email or Password.");
             }
         });

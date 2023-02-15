@@ -27,27 +27,26 @@
             </nav>
         </div>
         <div class="cart-avatar-container">
-            <button class="cart-btn" id="cart-btn">
-        <img
-          src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg"
-          alt="cart-icon" class="cart-icon">
-        <span class="cart-quantity" id="cart-quantity"></span>
-      </button>
+            <a href="shoppingCart.html" class="cart-btn" id="cart-btn">
+                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg"
+                    alt="cart-icon" class="cart-icon">
+                <span class="cart-quantity" id="cart-quantity"></span>
+            </a>
             <div class="cart-container" id="cart-container">
                 <span class="cart-label">cart</span>
                 <div class="cart-contents" id="cart-contents">
                     <div class="cart-contents-subcontainer">
-                        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg" alt="cart-thumbnail" class="cart-thumbnail">
+                        <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1-thumbnail.jpg"
+                            alt="cart-thumbnail" class="cart-thumbnail">
                         <div class="product-details">
                             <span class="product-name">fall limited edition sneakers</span>
                             <span>$125.00 x <span id="product-quantity"></span> <strong id="total"></strong></span>
                         </div>
 
                         <button class="delete-btn" id="delete-btn">
-              <img
-                src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-delete.svg"
-                alt="delete-icon" class="delete-icon">
-            </button>
+                            <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-delete.svg"
+                                alt="delete-icon" class="delete-icon">
+                        </button>
                     </div>
                     <button class="checkout-btn">checkout</button>
                 </div>
@@ -65,10 +64,10 @@
 
     <!-- Main -->
     <div class="main-container">
-
         <!-- Product Images -->
         <section class="left">
             <div class="product-container" id="product-container">
+                <div class="sketchfab-embed-wrapper"> <iframe style="width: 100%; height: 320px;" title="Shoe" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b2212101ed8f4adb88b0f3a9cf66137d/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/shoe-b2212101ed8f4adb88b0f3a9cf66137d?utm_medium=embed&utm_campaign=share-popup&utm_content=b2212101ed8f4adb88b0f3a9cf66137d" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Shoe </a> by <a href="https://sketchfab.com/ziyugao?utm_medium=embed&utm_campaign=share-popup&utm_content=b2212101ed8f4adb88b0f3a9cf66137d" target="_blank" style="font-weight: bold; color: #1CAAD9;"> ziyugao </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=b2212101ed8f4adb88b0f3a9cf66137d" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
                 <div class="product-image">
                     <img src="Images/RF FT01.png" alt="product-img-1" class="product-img">
                 </div>
@@ -108,16 +107,7 @@
                 <div class="product-image">
                     <img src="Images/YF PRO Y5.png" alt="product-img-13" class="product-img">
                 </div>
-
-
-
-
-
-
             </div>
-
-
-
             <!-- Thumbnails --------------------------------------------------->
             <div class="thumbnail-container">
                 <div class="thumbnail-image" onClick="currentSlide(1)">
@@ -130,7 +120,8 @@
                     <img src="Images/details.png">
                 </div>
                 <div class="thumbnail-image" onClick="currentSlide(4)">
-                    <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-4-thumbnail.jpg" alt="product-thumbnail-4" class="product-thumbnail">
+                    <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-4-thumbnail.jpg"
+                        alt="product-thumbnail-4" class="product-thumbnail">
                 </div>
             </div>
         </section>
@@ -142,7 +133,8 @@
 
             <p>
                 <span>These low-profile sneakers are your perfect casual wear </span>
-                <span>companion. Featuring our unique fish series! </span> It has a fish tail and fin which would bring you to freedom.
+                <span>companion. Featuring our unique fish series! </span> It has a fish tail and fin which would bring
+                you to freedom.
             </p>
 
             <div class="price">
@@ -152,20 +144,20 @@
             </div>
 
             <!-- Cart Controls -->
-            <div class="add-to-cart">
+            <div class="add-to-cart" id="add-to-cart" data-name="RF FISH 101" data-price="188.00" data-image="Images/RF FISH 101.png">
                 <div class="quantity">
                     <button class="decrease-btn quantity-btn" id="decrease-btn"><img
-              src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-minus.svg"
-              alt="decrease-icon" class="decrease-icon"></button>
+                            src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-minus.svg"
+                            alt="decrease-icon" class="decrease-icon"></button>
                     <span id="add-quantity">0</span>
                     <button class="increase-btn quantity-btn" id="increase-btn"><img
-              src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-plus.svg"
-              alt="increase-icon" class="increase-icon"></button>
+                            src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-plus.svg"
+                            alt="increase-icon" class="increase-icon"></button>
                 </div>
 
                 <button class="add-to-cart-btn" id="add-to-cart-btn"><img
-            src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg"
-            alt="cart-btn-icon" class="cart-btn-icon">Add to cart</button>
+                        src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/e6f54e15253b9446814d89e3709730eb174136bd/images/icon-cart.svg"
+                        alt="cart-btn-icon" class="cart-btn-icon">Add to cart</button>
             </div>
         </section>
     </div>
@@ -173,31 +165,37 @@
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <div class="close-icon-container" id="close-icon-container">
-            <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-close.svg" alt="close-icon" class="close-icon">
+            <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-close.svg"
+                alt="close-icon" class="close-icon">
         </div>
 
         <!-- Product Images -->
         <div class="product-container">
             <div class="product-image-lb">
-                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1.jpg" alt="product-img-1" class="product-img-lb">
+                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-1.jpg"
+                    alt="product-img-1" class="product-img-lb">
             </div>
             <div class="product-image-lb">
-                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-2.jpg" alt="product-img-2" class="product-img-lb">
+                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-2.jpg"
+                    alt="product-img-2" class="product-img-lb">
             </div>
             <div class="product-image-lb">
-                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-3.jpg" alt="product-img-3" class="product-img-lb">
+                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-3.jpg"
+                    alt="product-img-3" class="product-img-lb">
             </div>
             <div class="product-image-lb">
-                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-4.jpg" alt="product-img-4" class="product-img-lb">
+                <img src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/main/images/image-product-4.jpg"
+                    alt="product-img-4" class="product-img-lb">
             </div>
 
             <button class="product-btn prev-btn" onclick="plusSlides(-1)"><img
-          src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-previous.svg"
-          alt="prev-button-icon" class="button-icon"></button>
+                    src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-previous.svg"
+                    alt="prev-button-icon" class="button-icon"></button>
             <button class="product-btn next-btn" onclick="plusSlides(1)"><img
-          src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-next.svg"
-          alt="next-button-icon" class="button-icon"></button>
+                    src="https://raw.githubusercontent.com/frontendmentorio/ecommerce-product-page/168180def66c040b9b9a60afc31a31f4658272ec/images/icon-next.svg"
+                    alt="next-button-icon" class="button-icon"></button>
         </div>
+        
         <!--FOOTER-->
         <footer>
             <div class="footerT">
@@ -205,13 +203,18 @@
                     <h1 class="title">Newsletter</h1>
                     <form>
                         <fieldset>
-                            <input type="email" name="email" placeholder="email address*" requried=""><button class="btn2">subscribe</button>
+                            <input type="email" name="email" placeholder="email address*" requried=""><button
+                                class="btn2">subscribe</button>
                         </fieldset>
                     </form>
                 </section>
             </div>
         </footer>
+        
         <script src="product.js"></script>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/cart.js"></script>
 </body>
 
 </html>
