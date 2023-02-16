@@ -1189,7 +1189,7 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(Images/bg.jpeg);
+    background: url(sourceimages/logoip-03.png);
     background-size: cover;
 }
 
@@ -1201,12 +1201,12 @@ form {
 .contact .content h2 {
     font-size: 36px;
     font-weight: 500;
-    color: #fff;
+    color: black;
 }
 
 .contact .content p {
     font-weight: 300;
-    color: #fff;
+    color: black;
 }
 
 .containter {
