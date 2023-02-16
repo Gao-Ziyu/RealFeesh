@@ -10,7 +10,7 @@ This project is an ecommerce webpage for our brand, RealFeesh which sells mainly
 
 ## Design Process
 
-The main audience of this website is conusmers or anyone whose interest to buy a footwear and would like to buy a shoe.This project is the best way to help them achieve these it is a one-stop website that allows them to find out more about our different type of footwear products and make a purchase.
+The main audience of this website is conusmers or anyone whose interested to buy a footwear and would like to buy a shoe.This project is the best way to help them achieve these it is a one-stop website that allows them to find out more about our different type of footwear products and make a purchase.
 
 - As a user/ consumer, I would like to have a profile where I will be able to check all my deliveries and saved shopping cart when visiting the website and purchasing.
 - As back-end developer, I would like to have user data stored in database for profile so easy log in access to keep track.
