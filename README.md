@@ -1,5 +1,5 @@
 # RealFeesh
-https://github.com/Gao-Ziyu/RealFeesh
+[https://github.com/Gao-Ziyu/RealFeesh](https://gao-ziyu.github.io/RealFeesh/index.html)
 Year 1 Integrated Project.
 This is an ecommerce webpage for RealFeesh which sells mainly sneakers for unisex. We are to bring your coolest self with our sneakers. 
 
